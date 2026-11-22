@@ -7,8 +7,8 @@
 import { sparql, sleep, writeJson, readJson, today, note, warn } from "./lib.mjs";
 
 const MIN_SITELINKS = Number(process.env.SS_FILM_MIN_SITELINKS || 18);
-// film, animated feature film, anime film, silent film, documentary film, 3D film
-const TYPES = ["Q11424", "Q29168811", "Q20650540", "Q226730", "Q93204", "Q229390"];
+// film, animated film, animated feature film, anime film, silent film, documentary film, 3D film
+const TYPES = ["Q11424", "Q202866", "Q29168811", "Q20650540", "Q226730", "Q93204", "Q229390"];
 const CHUNK = 300;
 const qid = (uri) => uri.slice(uri.lastIndexOf("/") + 1);
 const films = new Map();
@@ -41,7 +41,7 @@ for (let i = 0; i < ids.length; i += CHUNK) {
   }
   for (const r of await sparql(`SELECT ?f ?v WHERE { VALUES ?f { ${chunk} } ?f wdt:P364 ?v. }`)) push(qid(r.f), "lang", qid(r.v).replace(/^/, "L"), 4);
   await sleep(1200);
-  for (const r of await sparql(`SELECT ?f ?alt WHERE { VALUES ?f { ${chunk} } ?f skos:altLabel ?alt. FILTER(LANG(?alt) = "en") }`)) push(qid(r.f), "aka", r.alt, 5);
+  for (const r of await sparql(`SELECT ?f ?alt WHERE { VALUES ?f { ${chunk} } ?f skos:altLabel ?alt. FILTER(LANG(?alt) = "en" || LANG(?alt) = "mul") }`)) push(qid(r.f), "aka", r.alt, 6);
   await sleep(1200);
   console.log(`details ${Math.min(i + CHUNK, ids.length)}/${ids.length}`);
 }

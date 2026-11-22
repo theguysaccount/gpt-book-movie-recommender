@@ -83,9 +83,8 @@ async function searchFilm(w) {
       mwapi:search "${q}"; mwapi:language "en"; mwapi:limit "15". ?f wikibase:apiOutputItem mwapi:item. }
     ?f wdt:P57 [] .
     OPTIONAL { ?f wdt:P577 ?d. BIND(YEAR(?d) AS ?y) }
-    OPTIONAL { ?f wdt:P57 ?dir. ?dir rdfs:label ?dLabel. FILTER(LANG(?dLabel) = "en") }
-    OPTIONAL { ?f wikibase:sitelinks ?sl } OPTIONAL { ?f wdt:P345 ?imdb }
-    ?f rdfs:label ?l. FILTER(LANG(?l) = "en") }`);
+    OPTIONAL { ?f wdt:P57 ?dir. ?dir rdfs:label ?dLabel. FILTER(LANG(?dLabel) = "en" || LANG(?dLabel) = "mul") }
+    OPTIONAL { ?f wikibase:sitelinks ?sl } OPTIONAL { ?f wdt:P345 ?imdb } }`);
   await sleep(1500);
   const films = new Map();
   for (const r of rows) {
