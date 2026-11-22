@@ -2077,7 +2077,7 @@
    "s": "ok",
    "src": "ol",
    "id": "OL1925470W",
-   "t": "Thebonfire of the Vanities",
+   "t": "The Bonfire of the Vanities",
    "c": "Tom Wolfe",
    "y": 1920,
    "pop": 171,
@@ -8872,7 +8872,7 @@
    "c": "Nicholas Eames",
    "y": 2017,
    "pop": 95,
-   "how": "list",
+   "how": "search",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
@@ -12667,7 +12667,7 @@
    "t": "Persepolis",
    "c": "Marjane Satrapi",
    "y": 2000,
-   "pop": 491,
+   "pop": 493,
    "how": "list",
    "at": "2026-11-22",
    "cat": 1,
@@ -19224,26 +19224,35 @@
    "wp": "Akira_(1988_film)"
   },
   "f|aladdin|clements": {
-   "s": "missing",
+   "s": "ok",
    "src": "wd",
+   "id": "Q215518",
+   "t": "Aladdin",
+   "c": "John Musker & Ron Clements",
+   "y": 1992,
+   "pop": 105,
+   "imdb": "tt0103639",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
     "t": "Aladdin",
     "c": "Ron Clements & John Musker",
     "y": 1992
-   }
+   },
+   "lb": "aladdin",
+   "wp": "Aladdin_(1992_Disney_film)"
   },
   "f|alice in wonderland|geronimi": {
    "s": "ok",
    "src": "wd",
    "id": "Q189875",
    "t": "Alice in Wonderland",
-   "c": "Wilfred Jackson & Clyde Geronimi & Hamilton Luske",
+   "c": "Clyde Geronimi & Hamilton Luske & Wilfred Jackson",
    "y": 1951,
    "pop": 77,
    "imdb": "tt0043274",
-   "how": "search",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 0,
    "want": {
@@ -19983,7 +19992,7 @@
    "y": 2015,
    "pop": 33,
    "imdb": "tt2401878",
-   "how": "search",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
@@ -20635,15 +20644,24 @@
    "wp": "The_Ballad_of_Buster_Scruggs"
   },
   "f|bambi|hand": {
-   "s": "missing",
+   "s": "ok",
    "src": "wd",
+   "id": "Q43051",
+   "t": "Bambi",
+   "c": "James Algar & David Hand & Bill Roberts",
+   "y": 1942,
+   "pop": 113,
+   "imdb": "tt0034492",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
     "t": "Bambi",
     "c": "David Hand",
     "y": 1942
-   }
+   },
+   "lb": "bambi",
+   "wp": "Bambi"
   },
   "f|banshees of inisherin|mcdonagh": {
    "s": "ok",
@@ -21014,7 +21032,7 @@
    "y": 1991,
    "pop": 100,
    "imdb": "tt0101414",
-   "how": "search",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
@@ -21914,7 +21932,7 @@
    "y": 2014,
    "pop": 34,
    "imdb": "tt2262227",
-   "how": "search",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 0,
    "want": {
@@ -22177,15 +22195,24 @@
    "wp": "Braveheart"
   },
   "f|brave|andrews": {
-   "s": "missing",
+   "s": "ok",
    "src": "wd",
+   "id": "Q126796",
+   "t": "Brave",
+   "c": "Brenda Chapman & Steve Purcell & Mark Andrews",
+   "y": 2012,
+   "pop": 78,
+   "imdb": "tt1217209",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 0,
    "want": {
     "t": "Brave",
     "c": "Mark Andrews & Brenda Chapman",
     "y": 2012
-   }
+   },
+   "lb": "brave-2012",
+   "wp": "Brave_(2012_film)"
   },
   "f|brazil|gilliam": {
    "s": "ok",
@@ -23288,15 +23315,24 @@
    "wp": "Chicago_(2002_film)"
   },
   "f|chicken run|lord": {
-   "s": "missing",
+   "s": "ok",
    "src": "wd",
+   "id": "Q156401",
+   "t": "Chicken Run",
+   "c": "Nick Park & Peter Lord",
+   "y": 2000,
+   "pop": 67,
+   "imdb": "tt0120630",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
     "t": "Chicken Run",
     "c": "Peter Lord & Nick Park",
     "y": 2000
-   }
+   },
+   "lb": "chicken-run",
+   "wp": "Chicken_Run"
   },
   "f|children of men|cuaron": {
    "s": "ok",
@@ -23778,7 +23814,7 @@
    "y": 2017,
    "pop": 74,
    "imdb": "tt2380307",
-   "how": "search",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
@@ -24118,7 +24154,7 @@
    "y": 2009,
    "pop": 57,
    "imdb": "tt0327597",
-   "how": "search",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
@@ -24130,15 +24166,24 @@
    "wp": "Coraline_(film)"
   },
   "f|corpse bride|burton": {
-   "s": "missing",
+   "s": "ok",
    "src": "wd",
+   "id": "Q164417",
+   "t": "Corpse Bride",
+   "c": "Tim Burton & Mike Johnson",
+   "y": 2005,
+   "pop": 59,
+   "imdb": "tt0121164",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 0,
    "want": {
     "t": "Corpse Bride",
     "c": "Tim Burton & Mike Johnson",
     "y": 2005
-   }
+   },
+   "lb": "corpse-bride",
+   "wp": "Corpse_Bride"
   },
   "f|cove|psihoyos": {
    "s": "ok",
@@ -26041,15 +26086,24 @@
    "wp": "Empire_of_the_Sun_(film)"
   },
   "f|empire strikes back|kershner": {
-   "s": "missing",
+   "s": "ok",
    "src": "wd",
+   "id": "Q181795",
+   "t": "Star Wars: Episode V – The Empire Strikes Back",
+   "c": "Irvin Kershner",
+   "y": 1980,
+   "pop": 84,
+   "imdb": "tt0080684",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
     "t": "The Empire Strikes Back",
     "c": "Irvin Kershner",
     "y": 1980
-   }
+   },
+   "lb": "the-empire-strikes-back",
+   "wp": "The_Empire_Strikes_Back"
   },
   "f|end of watch|ayer": {
    "s": "ok",
@@ -26640,7 +26694,7 @@
    "y": 2009,
    "pop": 62,
    "imdb": "tt0432283",
-   "how": "search",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
@@ -26972,15 +27026,24 @@
    "wp": "Final_Destination_(film)"
   },
   "f|finding nemo|stanton": {
-   "s": "missing",
+   "s": "ok",
    "src": "wd",
+   "id": "Q132863",
+   "t": "Finding Nemo",
+   "c": "Andrew Stanton & Lee Unkrich",
+   "y": 2003,
+   "pop": 92,
+   "imdb": "tt0266543",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
     "t": "Finding Nemo",
     "c": "Andrew Stanton",
     "y": 2003
-   }
+   },
+   "lb": "finding-nemo",
+   "wp": "Finding_Nemo"
   },
   "f|firm|pollack": {
    "s": "ok",
@@ -27502,7 +27565,7 @@
    "y": 2013,
    "pop": 110,
    "imdb": "tt2294629",
-   "how": "search",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
@@ -27614,15 +27677,24 @@
    "wp": "Galaxy_Quest"
   },
   "f|gambler|reisz": {
-   "s": "missing",
+   "s": "ok",
    "src": "wd",
+   "id": "Q3454137",
+   "t": "The Gambler",
+   "c": "Karel Reisz",
+   "y": 1974,
+   "pop": 11,
+   "imdb": "tt0071532",
+   "how": "search",
    "at": "2026-11-22",
    "cat": 0,
    "want": {
     "t": "The Gambler",
     "c": "Karel Reisz",
     "y": 1974
-   }
+   },
+   "lb": "the-gambler",
+   "wp": "The_Gambler_(1974_film)"
   },
   "f|game night|daley": {
    "s": "ok",
@@ -29658,12 +29730,12 @@
   "f|how to train your dragon|sanders": {
    "s": "ok",
    "src": "wd",
-   "id": "Q118904382",
+   "id": "Q373096",
    "t": "How to Train Your Dragon",
-   "c": "Dean DeBlois",
-   "y": 2025,
-   "pop": 41,
-   "imdb": "tt26743210",
+   "c": "Chris Sanders & Dean DeBlois",
+   "y": 2010,
+   "pop": 64,
+   "imdb": "tt0892769",
    "how": "list",
    "at": "2026-11-22",
    "cat": 1,
@@ -29672,8 +29744,8 @@
     "c": "Chris Sanders & Dean DeBlois",
     "y": 2010
    },
-   "lb": "how-to-train-your-dragon-2025",
-   "wp": "How_to_Train_Your_Dragon_(2025_film)"
+   "lb": "how-to-train-your-dragon",
+   "wp": "How_to_Train_Your_Dragon_(2010_film)"
   },
   "f|howards end|ivory": {
    "s": "ok",
@@ -30084,7 +30156,7 @@
    "y": 2010,
    "pop": 25,
    "imdb": "tt0775489",
-   "how": "search",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 0,
    "want": {
@@ -30318,13 +30390,13 @@
   "f|incredibles|bird": {
    "s": "ok",
    "src": "wd",
-   "id": "Q24832112",
+   "id": "Q213326",
    "t": "The Incredibles",
    "c": "Brad Bird",
-   "y": 2018,
-   "pop": 59,
-   "imdb": "tt3606756",
-   "how": "search",
+   "y": 2004,
+   "pop": 84,
+   "imdb": "tt0317705",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
@@ -30332,8 +30404,8 @@
     "c": "Brad Bird",
     "y": 2004
    },
-   "lb": "incredibles-2",
-   "wp": "Incredibles_2"
+   "lb": "the-incredibles",
+   "wp": "The_Incredibles"
   },
   "f|independence day|emmerich": {
    "s": "ok",
@@ -30516,15 +30588,24 @@
    "wp": "Inside_Man"
   },
   "f|inside out|docter": {
-   "s": "missing",
+   "s": "ok",
    "src": "wd",
+   "id": "Q6144664",
+   "t": "Inside Out",
+   "c": "Pete Docter & Ronnie del Carmen",
+   "y": 2015,
+   "pop": 86,
+   "imdb": "tt2096673",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
     "t": "Inside Out",
     "c": "Pete Docter",
     "y": 2015
-   }
+   },
+   "lb": "inside-out-2015",
+   "wp": "Inside_Out"
   },
   "f|insider|mann": {
    "s": "ok",
@@ -31075,7 +31156,7 @@
    "y": 1967,
    "pop": 94,
    "imdb": "tt0061852",
-   "how": "search",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
@@ -31555,7 +31636,7 @@
    "y": 2016,
    "pop": 40,
    "imdb": "tt4302938",
-   "how": "search",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
@@ -31569,12 +31650,13 @@
   "f|kung fu panda|osborne": {
    "s": "ok",
    "src": "wd",
-   "id": "Q2081372",
+   "id": "Q129193",
    "t": "Kung Fu Panda",
-   "c": "Mark Osborne",
+   "c": "Mark Osborne & John Stevenson",
    "y": 2008,
-   "pop": 28,
-   "how": "search",
+   "pop": 87,
+   "imdb": "tt0441773",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
@@ -31582,7 +31664,8 @@
     "c": "Mark Osborne & John Stevenson",
     "y": 2008
    },
-   "wp": "Kung_Fu_Panda"
+   "lb": "kung-fu-panda",
+   "wp": "Kung_Fu_Panda_(film)"
   },
   "f|kwaidan|kobayashi": {
    "s": "ok",
@@ -32109,11 +32192,11 @@
    "src": "wd",
    "id": "Q2608065",
    "t": "The Lego Movie",
-   "c": "Christopher Miller & Phil Lord",
+   "c": "Phil Lord & Christopher Miller",
    "y": 2014,
    "pop": 51,
    "imdb": "tt1490017",
-   "how": "search",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
@@ -32265,15 +32348,24 @@
    "wp": "Life_Is_Beautiful"
   },
   "f|life of brian|jones": {
-   "s": "missing",
+   "s": "ok",
    "src": "wd",
+   "id": "Q24953",
+   "t": "Monty Python's Life of Brian",
+   "c": "Terry Jones",
+   "y": 1979,
+   "pop": 61,
+   "imdb": "tt0079470",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
     "t": "Life of Brian",
     "c": "Terry Jones",
     "y": 1979
-   }
+   },
+   "lb": "life-of-brian",
+   "wp": "Monty_Python's_Life_of_Brian"
   },
   "f|life of pi|lee": {
    "s": "ok",
@@ -32364,7 +32456,7 @@
    "y": 1994,
    "pop": 132,
    "imdb": "tt0110357",
-   "how": "search",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
@@ -32396,15 +32488,24 @@
    "wp": "Lion_(2016_film)"
   },
   "f|little mermaid|clements": {
-   "s": "missing",
+   "s": "ok",
    "src": "wd",
+   "id": "Q190135",
+   "t": "The Little Mermaid",
+   "c": "John Musker & Ron Clements",
+   "y": 1989,
+   "pop": 116,
+   "imdb": "tt0097757",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
     "t": "The Little Mermaid",
     "c": "Ron Clements & John Musker",
     "y": 1989
-   }
+   },
+   "lb": "the-little-mermaid",
+   "wp": "The_Little_Mermaid_(1989_film)"
   },
   "f|little miss sunshine|dayton": {
    "s": "ok",
@@ -34107,15 +34208,24 @@
    "wp": "Mississippi_Burning"
   },
   "f|moana|clements": {
-   "s": "missing",
+   "s": "ok",
    "src": "wd",
+   "id": "Q18647981",
+   "t": "Moana",
+   "c": "John Musker & Ron Clements & Chris Williams",
+   "y": 2016,
+   "pop": 90,
+   "imdb": "tt3521164",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
     "t": "Moana",
     "c": "Ron Clements & John Musker",
     "y": 2016
-   }
+   },
+   "lb": "moana-2016",
+   "wp": "Moana_(2016_film)"
   },
   "f|modern times|chaplin": {
    "s": "ok",
@@ -34178,15 +34288,24 @@
    "wp": "Moneyball_(film)"
   },
   "f|monsters inc|docter": {
-   "s": "missing",
+   "s": "ok",
    "src": "wd",
+   "id": "Q187726",
+   "t": "Monsters, Inc.",
+   "c": "Pete Docter & Lee Unkrich & David Silverman",
+   "y": 2001,
+   "pop": 88,
+   "imdb": "tt0198781",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
     "t": "Monsters, Inc.",
     "c": "Pete Docter",
     "y": 2001
-   }
+   },
+   "lb": "monsters-inc",
+   "wp": "Monsters,_Inc."
   },
   "f|monster|jenkins": {
    "s": "ok",
@@ -34433,11 +34552,11 @@
    "src": "wd",
    "id": "Q537407",
    "t": "Mulan",
-   "c": "Barry Cook & Tony Bancroft",
+   "c": "Tony Bancroft & Barry Cook",
    "y": 1998,
    "pop": 87,
    "imdb": "tt0120762",
-   "how": "search",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
@@ -35109,15 +35228,24 @@
    "wp": "Nightmare_Alley_(2021_film)"
   },
   "f|nightmare before christmas|selick": {
-   "s": "missing",
+   "s": "ok",
    "src": "wd",
+   "id": "Q322328",
+   "t": "The Nightmare Before Christmas",
+   "c": "Henry Selick",
+   "y": 1993,
+   "pop": 64,
+   "imdb": "tt0107688",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
     "t": "The Nightmare Before Christmas",
     "c": "Henry Selick",
     "y": 1993
-   }
+   },
+   "lb": "the-nightmare-before-christmas",
+   "wp": "The_Nightmare_Before_Christmas"
   },
   "f|nightmare on elm street|craven": {
    "s": "ok",
@@ -36468,7 +36596,7 @@
    "y": 2007,
    "pop": 44,
    "imdb": "tt0808417",
-   "how": "search",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
@@ -36720,15 +36848,24 @@
    "wp": "Picnic_at_Hanging_Rock_(film)"
   },
   "f|pinocchio|sharpsteen": {
-   "s": "missing",
+   "s": "ok",
    "src": "wd",
+   "id": "Q4341553",
+   "t": "Pinocchio",
+   "c": "Norm Ferguson & Hamilton Luske & Wilfred Jackson",
+   "y": 1940,
+   "pop": 99,
+   "imdb": "tt0032910",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
     "t": "Pinocchio",
     "c": "Ben Sharpsteen & Hamilton Luske",
     "y": 1940
-   }
+   },
+   "lb": "pinocchio",
+   "wp": "Pinocchio_(1940_film)"
   },
   "f|pirates of the caribbean the curse of the black pearl|verbinski": {
    "s": "ok",
@@ -37671,15 +37808,24 @@
    "wp": "Rashomon"
   },
   "f|ratatouille|bird": {
-   "s": "missing",
+   "s": "ok",
    "src": "wd",
+   "id": "Q170035",
+   "t": "Ratatouille",
+   "c": "Brad Bird & Jan Pinkava",
+   "y": 2007,
+   "pop": 90,
+   "imdb": "tt0382932",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
     "t": "Ratatouille",
     "c": "Brad Bird",
     "y": 2007
-   }
+   },
+   "lb": "ratatouille",
+   "wp": "Ratatouille_(film)"
   },
   "f|raw|ducournau": {
    "s": "ok",
@@ -38102,15 +38248,24 @@
    "wp": "Road_to_Perdition"
   },
   "f|road warrior|miller": {
-   "s": "missing",
+   "s": "ok",
    "src": "wd",
+   "id": "Q1125262",
+   "t": "Mad Max 2",
+   "c": "George Miller",
+   "y": 1981,
+   "pop": 43,
+   "imdb": "tt0082694",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 0,
    "want": {
     "t": "The Road Warrior",
     "c": "George Miller",
     "y": 1981
-   }
+   },
+   "lb": "mad-max-2",
+   "wp": "Mad_Max_2"
   },
   "f|road|hillcoat": {
    "s": "ok",
@@ -38133,15 +38288,24 @@
    "wp": "The_Road_(2009_film)"
   },
   "f|robin hood|reitherman": {
-   "s": "missing",
+   "s": "ok",
    "src": "wd",
+   "id": "Q19090",
+   "t": "Robin Hood",
+   "c": "Wolfgang Reitherman",
+   "y": 1973,
+   "pop": 87,
+   "imdb": "tt0070608",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 0,
    "want": {
     "t": "Robin Hood",
     "c": "Wolfgang Reitherman",
     "y": 1973
-   }
+   },
+   "lb": "robin-hood",
+   "wp": "Robin_Hood_(1973_film)"
   },
   "f|robocop|verhoeven": {
    "s": "ok",
@@ -38875,15 +39039,24 @@
    "wp": "Scream_(1996_film)"
   },
   "f|se7en|fincher": {
-   "s": "missing",
+   "s": "ok",
    "src": "wd",
+   "id": "Q190908",
+   "t": "Seven",
+   "c": "David Fincher",
+   "y": 1995,
+   "pop": 73,
+   "imdb": "tt0114369",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
     "t": "Se7en",
     "c": "David Fincher",
     "y": 1995
-   }
+   },
+   "lb": "se7en",
+   "wp": "Seven_(1995_film)"
   },
   "f|searchers|ford": {
    "s": "ok",
@@ -38954,7 +39127,7 @@
    "y": 2009,
    "pop": 30,
    "imdb": "tt0485601",
-   "how": "search",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
@@ -38974,7 +39147,7 @@
    "y": 1982,
    "pop": 34,
    "imdb": "tt0084649",
-   "how": "search",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 0,
    "want": {
@@ -39568,19 +39741,22 @@
   "f|shrek|adamson": {
    "s": "ok",
    "src": "wd",
-   "id": "Q61946928",
+   "id": "Q483815",
    "t": "Shrek",
-   "c": "Vicky Jenson & Andrew Adamson & Conrad Vernon & Mike Mitchell & Walt Dohrn & Kelly Asbury & Chris Miller",
+   "c": "Andrew Adamson & Vicky Jenson",
    "y": 2001,
-   "pop": 7,
-   "how": "search",
+   "pop": 113,
+   "imdb": "tt0126029",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
     "t": "Shrek",
     "c": "Andrew Adamson & Vicky Jenson",
     "y": 2001
-   }
+   },
+   "lb": "shrek",
+   "wp": "Shrek"
   },
   "f|shutter island|scorsese": {
    "s": "ok",
@@ -39987,11 +40163,11 @@
    "src": "wd",
    "id": "Q215617",
    "t": "Sleeping Beauty",
-   "c": "Clyde Geronimi & Wolfgang Reitherman & Les Clark & Eric Larson",
+   "c": "Clyde Geronimi & Wolfgang Reitherman & Les Clark",
    "y": 1959,
    "pop": 93,
    "imdb": "tt0053285",
-   "how": "search",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
@@ -40127,11 +40303,11 @@
    "src": "wd",
    "id": "Q134430",
    "t": "Snow White and the Seven Dwarfs",
-   "c": "Wilfred Jackson & William Cottrell & Percival C. Pearce & Ben Sharpsteen & Larry Morey & David Hand",
+   "c": "David Hand & Wilfred Jackson & William Cottrell",
    "y": 1937,
    "pop": 121,
    "imdb": "tt0029583",
-   "how": "search",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
@@ -40251,7 +40427,7 @@
    "y": 2014,
    "pop": 32,
    "imdb": "tt1865505",
-   "how": "search",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
@@ -40331,7 +40507,7 @@
    "y": 2020,
    "pop": 58,
    "imdb": "tt2948372",
-   "how": "search",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
@@ -40443,15 +40619,24 @@
    "wp": "Spider-Man_2"
   },
   "f|spider man into the spider verse|persichetti": {
-   "s": "missing",
+   "s": "ok",
    "src": "wd",
+   "id": "Q29588607",
+   "t": "Spider-Man: Into the Spider-Verse",
+   "c": "Peter Ramsey & Rodney Rothman & Bob Persichetti",
+   "y": 2018,
+   "pop": 68,
+   "imdb": "tt4633694",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
     "t": "Spider-Man: Into the Spider-Verse",
     "c": "Bob Persichetti & Peter Ramsey",
     "y": 2018
-   }
+   },
+   "lb": "spider-man-into-the-spider-verse",
+   "wp": "Spider-Man:_Into_the_Spider-Verse"
   },
   "f|spider man no way home|watts": {
    "s": "ok",
@@ -41065,15 +41250,24 @@
    "wp": "Summer_of_Soul"
   },
   "f|sunset blvd|wilder": {
-   "s": "missing",
+   "s": "ok",
    "src": "wd",
+   "id": "Q193570",
+   "t": "Sunset Boulevard",
+   "c": "Billy Wilder",
+   "y": 1950,
+   "pop": 62,
+   "imdb": "tt0043014",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 0,
    "want": {
     "t": "Sunset Blvd.",
     "c": "Billy Wilder",
     "y": 1950
-   }
+   },
+   "lb": "sunset-boulevard",
+   "wp": "Sunset_Boulevard_(film)"
   },
   "f|sunset boulevard|wilder": {
    "s": "ok",
@@ -41384,7 +41578,7 @@
    "y": 2010,
    "pop": 92,
    "imdb": "tt0398286",
-   "how": "search",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 0,
    "want": {
@@ -42278,12 +42472,13 @@
   "f|toy story|lasseter": {
    "s": "ok",
    "src": "wd",
-   "id": "Q2316015",
+   "id": "Q171048",
    "t": "Toy Story",
-   "c": "Josh Cooley & John Lasseter & Lee Unkrich",
+   "c": "John Lasseter",
    "y": 1995,
-   "pop": 44,
-   "how": "search",
+   "pop": 116,
+   "imdb": "tt0114709",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
@@ -42291,7 +42486,8 @@
     "c": "John Lasseter",
     "y": 1995
    },
-   "wp": "Toy_Story_(franchise)"
+   "lb": "toy-story",
+   "wp": "Toy_Story"
   },
   "f|trading places|landis": {
    "s": "ok",
@@ -42502,7 +42698,7 @@
    "y": 2003,
    "pop": 34,
    "imdb": "tt0286244",
-   "how": "search",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
@@ -42654,15 +42850,24 @@
    "wp": "The_Truman_Show"
   },
   "f|twelve monkeys|gilliam": {
-   "s": "missing",
+   "s": "ok",
    "src": "wd",
+   "id": "Q175038",
+   "t": "12 Monkeys",
+   "c": "Terry Gilliam",
+   "y": 1995,
+   "pop": 65,
+   "imdb": "tt0114746",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
     "t": "Twelve Monkeys",
     "c": "Terry Gilliam",
     "y": 1995
-   }
+   },
+   "lb": "twelve-monkeys",
+   "wp": "12_Monkeys"
   },
   "f|twilight|hardwicke": {
    "s": "ok",
@@ -42925,15 +43130,24 @@
    "wp": "Up_in_the_Air_(2009_film)"
   },
   "f|up|docter": {
-   "s": "missing",
+   "s": "ok",
    "src": "wd",
+   "id": "Q174811",
+   "t": "Up",
+   "c": "Pete Docter & Bob Peterson",
+   "y": 2009,
+   "pop": 85,
+   "imdb": "tt1049413",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
     "t": "Up",
     "c": "Pete Docter",
     "y": 2009
-   }
+   },
+   "lb": "up",
+   "wp": "Up_(2009_film)"
   },
   "f|usual suspects|singer": {
    "s": "ok",
@@ -43236,15 +43450,24 @@
    "wp": "The_Walk_(2015_film)"
   },
   "f|wall e|stanton": {
-   "s": "missing",
+   "s": "ok",
    "src": "wd",
+   "id": "Q104905",
+   "t": "WALL-E",
+   "c": "Andrew Stanton",
+   "y": 2008,
+   "pop": 97,
+   "imdb": "tt0910970",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
     "t": "WALL-E",
     "c": "Andrew Stanton",
     "y": 2008
-   }
+   },
+   "lb": "walle",
+   "wp": "WALL-E"
   },
   "f|wall street|stone": {
    "s": "ok",
@@ -43269,12 +43492,12 @@
   "f|wallace and gromit the wrong trousers|park": {
    "s": "ok",
    "src": "wd",
-   "id": "Q126390903",
-   "t": "Wallace and Gromit: Vengeance Most Fowl",
-   "c": "Nick Park & Merlin Crossingham",
-   "y": 2024,
-   "pop": 32,
-   "imdb": "tt17163970",
+   "id": "Q318428",
+   "t": "Wallace & Gromit: The Curse of the Were-Rabbit",
+   "c": "Nick Park & Steve Box",
+   "y": 2005,
+   "pop": 55,
+   "imdb": "tt0312004",
    "how": "list",
    "at": "2026-11-22",
    "cat": 0,
@@ -43283,8 +43506,8 @@
     "c": "Nick Park",
     "y": 1993
    },
-   "lb": "wallace-gromit-vengeance-most-fowl",
-   "wp": "Wallace_&_Gromit:_Vengeance_Most_Fowl"
+   "lb": "wallace-gromit-the-curse-of-the-were-rabbit",
+   "wp": "Wallace_&_Gromit:_The_Curse_of_the_Were-Rabbit"
   },
   "f|waltz with bashir|folman": {
    "s": "ok",
@@ -43295,7 +43518,7 @@
    "y": 2008,
    "pop": 37,
    "imdb": "tt1185616",
-   "how": "search",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
@@ -44055,7 +44278,7 @@
    "y": 2020,
    "pop": 24,
    "imdb": "tt5198068",
-   "how": "search",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
@@ -44275,7 +44498,7 @@
    "y": 2012,
    "pop": 75,
    "imdb": "tt1772341",
-   "how": "search",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 0,
    "want": {
@@ -44558,15 +44781,24 @@
    "wp": "Zoolander"
   },
   "f|zootopia|howard": {
-   "s": "missing",
+   "s": "ok",
    "src": "wd",
+   "id": "Q15270647",
+   "t": "Zootopia",
+   "c": "Byron Howard & Rich Moore & Jared Bush",
+   "y": 2016,
+   "pop": 97,
+   "imdb": "tt2948356",
+   "how": "list",
    "at": "2026-11-22",
    "cat": 1,
    "want": {
     "t": "Zootopia",
     "c": "Byron Howard & Rich Moore",
     "y": 2016
-   }
+   },
+   "lb": "zootopia",
+   "wp": "Zootopia"
   }
  }
 }
