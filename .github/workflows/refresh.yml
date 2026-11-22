@@ -1,0 +1,79 @@
+# Monthly: refresh the open-data title lists, re-verify every catalog title against Open Library and Wikidata,
+# run the tests, commit what changed, then rebuild and redeploy the site.
+# Fails safe: a source that is down keeps last month's data (with a warning); if verification looks broken or a
+# test fails, nothing is committed or deployed and the live site stays as it was. Safe to re-run at any time.
+name: Monthly data refresh
+
+on:
+  schedule:
+    - cron: "23 7 3 * *"     # the 3rd of each month, 07:23 UTC (GitHub may start it hours late)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+  issues: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+env:
+  SITE_URL: ${{ vars.SITE_URL || format('https://{0}.github.io/{1}', github.repository_owner, github.event.repository.name) }}
+  GH_TOKEN: ${{ github.token }}
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Most-read books from Open Library
+        run: node pipeline/index-books.mjs || echo "::warning::Book list not refreshed; keeping last month's"
+      - name: Films from Wikidata
+        run: node pipeline/index-films.mjs || echo "::warning::Film list not refreshed; keeping last month's"
+      - name: Verify every title (books against Open Library, films against Wikidata)
+        run: node pipeline/verify.mjs
+      - name: Tests on the refreshed data
+        run: npm test
+      - name: Build check
+        run: node scripts/build.mjs
+      - name: Commit the refreshed data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/index data/catalog/verified.json data/catalog/verify-report.json
+          if git diff --cached --quiet; then echo "No data changed."; else
+            git commit -m "Monthly refresh: title lists and verification ($(date -u +%F))"
+            git pull --rebase --quiet origin main && git push origin HEAD:main
+          fi
+      - name: Rebuild and deploy the site
+        run: gh workflow run deploy.yml --ref main
+      - name: Close the alert issue after a good run
+        run: |
+          for n in $(gh issue list --label ops-alert --state open --json number --jq '.[].number'); do
+            gh issue close "$n" --comment "Monthly refresh passed again (run $GITHUB_RUN_ID)."
+          done
+      - name: Open or update the alert issue
+        if: failure()
+        run: |
+          gh label create ops-alert --color B60205 --description "Automated job failed" 2>/dev/null || true
+          body="The monthly refresh failed (run $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID). Nothing was committed or deployed; the live site is unchanged. This issue closes itself after the next good run."
+          num=$(gh issue list --label ops-alert --state open --json number --jq '.[0].number')
+          if [ -n "$num" ]; then gh issue comment "$num" --body "$body"; else gh issue create --title "Monthly data refresh failing" --label ops-alert --body "$body"; fi
+
+  keepalive:
+    if: always() && github.event_name == 'schedule'
+    needs: refresh
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+      - run: bash .github/scripts/keepalive.sh
+        env:
+          GH_TOKEN: ${{ github.token }}

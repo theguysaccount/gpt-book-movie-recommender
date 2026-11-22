@@ -61,16 +61,16 @@ function localFilm(w) {
 
 // ---------- APIs ----------
 async function searchBook(w) {
-  const fields = "key,title,subtitle,author_name,first_publish_year,readinglog_count";
+  const fields = "key,title,subtitle,author_name,first_publish_year,readinglog_count,editions,editions.title";
   const tries = [
-    `https://openlibrary.org/search.json?title=${encodeURIComponent(w.t)}&author=${encodeURIComponent(w.c.split(/\s+&\s+/)[0])}&fields=${fields}&limit=10`,
-    `https://openlibrary.org/search.json?q=${encodeURIComponent(`${w.t} ${w.c.split(/\s+&\s+/)[0]}`)}&fields=${fields}&limit=10`,
+    `https://openlibrary.org/search.json?title=${encodeURIComponent(w.t)}&author=${encodeURIComponent(w.c.split(/\s+&\s+/)[0])}&fields=${fields}&lang=en&limit=10`,
+    `https://openlibrary.org/search.json?q=${encodeURIComponent(`${w.t} ${w.c.split(/\s+&\s+/)[0]}`)}&fields=${fields}&lang=en&limit=10`,
   ];
   for (const url of tries) {
     const docs = (await fetchJson(url, { timeout: 60000 })).docs || [];
     await sleep(1200);
     const hit = docs.find((d) => d.author_name?.length && sameCreator(w.c, d.author_name.join(" & ")) &&
-      (keysMeet(w.t, d.title) || (d.subtitle && keysMeet(w.t, `${d.title}: ${d.subtitle}`))));
+      (keysMeet(w.t, d.title) || (d.subtitle && keysMeet(w.t, `${d.title}: ${d.subtitle}`)) || (d.editions?.docs || []).some((ed) => ed.title && keysMeet(w.t, ed.title))));
     if (hit) return { s: "ok", src: "ol", id: hit.key.replace("/works/", ""), t: hit.title, c: hit.author_name[0], y: hit.first_publish_year || null, pop: hit.readinglog_count || 0, how: "search" };
   }
   return { s: "missing", src: "ol" };
@@ -81,7 +81,7 @@ async function searchFilm(w) {
   const rows = await sparql(`SELECT ?f ?y ?dLabel ?sl ?imdb WHERE {
     SERVICE wikibase:mwapi { bd:serviceParam wikibase:api "EntitySearch"; wikibase:endpoint "www.wikidata.org";
       mwapi:search "${q}"; mwapi:language "en"; mwapi:limit "15". ?f wikibase:apiOutputItem mwapi:item. }
-    ?f wdt:P31/wdt:P279* wd:Q11424.
+    ?f wdt:P57 [] .
     OPTIONAL { ?f wdt:P577 ?d. BIND(YEAR(?d) AS ?y) }
     OPTIONAL { ?f wdt:P57 ?dir. ?dir rdfs:label ?dLabel. FILTER(LANG(?dLabel) = "en") }
     OPTIONAL { ?f wikibase:sitelinks ?sl } OPTIONAL { ?f wdt:P345 ?imdb }
@@ -126,23 +126,25 @@ const prev = readJson("data/catalog/verified.json", { entries: {} }).entries;
 const works = [...items.map((it) => ({ k: it.k, t: it.t, c: it.c, y: it.y, key: it.key, catalog: true })), ...targets.map((t) => ({ ...t, catalog: false }))];
 const entries = {};
 let apiCalls = 0, outOfTime = 0, apiErrors = 0;
-for (const w of works) {
+async function check(w) {
   let r = w.k === "b" ? localBook(w) : localFilm(w);
   const old = prev[w.key];
-  if (!r && old && old.how === "search" && old.s === "ok" && daysSince(old.at) < RECHECK_DAYS) r = { ...old };
+  const fresh = old && old.how === "search" && old.s === "ok" && daysSince(old.at) < RECHECK_DAYS;
+  if (!r && fresh) r = { ...old };
   if (!r && !OFFLINE) {
     if (Date.now() - started > TIME_BUDGET_MS) { outOfTime++; if (old) r = { ...old }; }
     else {
       try { apiCalls++; r = w.k === "b" ? await searchBook(w) : await searchFilm(w); }
       catch (e) { apiErrors++; warn(`lookup failed for "${w.t}": ${e.message}`); if (old) r = { ...old }; }
+      if (apiCalls % 50 === 0) console.log(`  ${apiCalls} lookups so far`);
     }
   }
   if (!r) r = old ? { ...old } : { s: "missing", src: w.k === "b" ? "ol" : "wd", how: OFFLINE ? "offline" : "none" };
-  if (r.how !== "search" || !r.at || r.s !== "ok") r.at = day;
-  if (r.s === "ok" && r.how === "search" && old?.at && old.how === "search" && old.s === "ok" && daysSince(old.at) < RECHECK_DAYS) r.at = old.at;
+  r.at = r.s === "ok" && r.how === "search" && fresh ? old.at : day;
   entries[w.key] = { ...r, cat: w.catalog ? 1 : 0, want: { t: w.t, c: w.c, y: w.y } };
-  if (apiCalls && apiCalls % 50 === 0) console.log(`  ${apiCalls} lookups so far`);
 }
+// Books (Open Library) and films (Wikidata) are different hosts: check them side by side, each queue paced.
+await Promise.all(["b", "f"].map(async (k) => { for (const w of works.filter((x) => x.k === k)) await check(w); }));
 if (apiErrors > 25) throw new Error(`${apiErrors} lookups failed; a source is unreachable. Keeping the previous verified.json`);
 
 // Film links for every verified film (catalog and targets).
@@ -153,9 +155,9 @@ if (!OFFLINE && qids.length) {
     for (const e of Object.values(entries)) if (e.s === "ok" && e.src === "wd") Object.assign(e, links[e.id] || {});
   } catch (e) {
     warn(`could not read film links (${e.message}); keeping last month's`);
-    for (const [k, e] of Object.entries(entries)) if (prev[k]?.id === e.id) for (const f of ["lb", "wp", "imdb"]) if (prev[k][f] && !e[f]) e[f] = prev[k][f];
+    for (const [k, e] of Object.entries(entries)) if (prev[k]?.id && prev[k].id === e.id) for (const f of ["lb", "wp", "imdb"]) if (prev[k][f] && !e[f]) e[f] = prev[k][f];
   }
-} else for (const [k, e] of Object.entries(entries)) if (prev[k]?.id === e.id) for (const f of ["lb", "wp", "imdb"]) if (prev[k][f] && !e[f]) e[f] = prev[k][f];
+} else for (const [k, e] of Object.entries(entries)) if (prev[k]?.id && prev[k].id === e.id) for (const f of ["lb", "wp", "imdb"]) if (prev[k][f] && !e[f]) e[f] = prev[k][f];
 
 const cat = Object.values(entries).filter((e) => e.cat);
 const okCat = cat.filter((e) => e.s === "ok").length;

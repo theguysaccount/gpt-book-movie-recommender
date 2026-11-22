@@ -113,7 +113,7 @@ export function loadData() {
       if (f.en === false) tagKeys.add("s:world-cinema");
       if (f.y && f.y < 1930) tagKeys.add("s:silent-film");
       const x = [...tagKeys].map((k) => tagIdx.get(k)).filter((i) => i !== undefined).sort((a, z) => a - z);
-      const row = [f.t, f.d.slice(0, 2).join(" & "), f.y, x, f.sl || 0, f.imdb || 0];
+      const row = [f.t, f.d.slice(0, 2).join(" & "), f.y, x, f.sl || 0, 0];   // IMDb ids only for catalog films: title + year already match imports
       const aka = (f.aka || []).filter((a) => norm(a) !== norm(f.t) && a.length < 80).slice(0, 3);
       if (aka.length) row.push(aka);
       return row;
@@ -354,13 +354,13 @@ function homePage(data, H, v) {
   const topB = data.items.filter((o) => o.k === "b").slice(0, 12), topF = data.items.filter((o) => o.k === "f").slice(0, 12);
   const body = `
 <section class="hero" id="import">
+  <input id="file" type="file" accept=".csv,.zip,text/csv,application/zip" multiple class="visually-hidden" aria-label="Choose export files">
   <h1>Your next book or film, picked from your own ratings, with the reasons.</h1>
   <p class="lede">Drop in your Goodreads, StoryGraph, Letterboxd or IMDb export. Everything runs in this browser tab: <strong>your library never leaves your device</strong>.</p>
   <div class="dropzone" id="dropzone">
     <p class="drop-title">Choose or drop your export</p>
     <p class="drop-sub">CSV files, or the Letterboxd ZIP as it downloads. You can add several.</p>
     <label class="btn" for="file">Choose files</label>
-    <input id="file" type="file" accept=".csv,.zip,text/csv,application/zip" multiple class="visually-hidden">
     <p class="drop-alt"><button type="button" class="linkish" id="rate-start">No export? Rate a few titles</button> · <button type="button" class="linkish" id="sample-start">Try a sample library</button></p>
     <p class="drop-help">How to export: <a href="${rel("how-to-export-goodreads/")}">Goodreads</a> · <a href="${rel("how-to-export-letterboxd/")}">Letterboxd</a> · <a href="${rel("how-to-export-storygraph-imdb/")}">StoryGraph, IMDb</a></p>
   </div>
@@ -399,7 +399,7 @@ function profilePage(v) {
 
 function notFoundPage(v) {
   const body = `<section class="guide"><h1>That page isn't here</h1><p>It may have moved, or the title was left out after the monthly check.</p><p><a class="btn" href="${rel("")}">Get my picks</a> <a class="btn ghost" href="${rel("books/")}">Browse books</a> <a class="btn ghost" href="${rel("movies/")}">Browse movies</a></p></section>`;
-  return shell({ title: `Not found | ${NAME}`, description: "Page not found.", pathname: "404.html", body, v, noindex: true });
+  return shell({ title: `Not found | ${NAME}`, description: "This page isn't here. Get book and film picks from your own ratings, or browse books and movies like the ones you love.", pathname: "404.html", body, v, noindex: true });
 }
 
 // ---------------- assets ----------------
