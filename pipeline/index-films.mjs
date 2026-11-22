@@ -10,6 +10,10 @@ const MIN_SITELINKS = Number(process.env.SS_FILM_MIN_SITELINKS || 18);
 // film, animated film, animated feature film, anime film, silent film, documentary film, 3D film
 const TYPES = ["Q11424", "Q202866", "Q29168811", "Q20650540", "Q226730", "Q93204", "Q229390"];
 const CHUNK = 300;
+// Wikidata's query service is sometimes slow; give up (keeping last month's list) rather than run the job out of time.
+const BUDGET_MS = Number(process.env.SS_FILM_BUDGET_MS || 150 * 60 * 1000);
+const t0 = Date.now();
+const overBudget = () => { if (Date.now() - t0 > BUDGET_MS) throw new Error(`film list took over ${BUDGET_MS / 60000} minutes; keeping the existing list`); };
 const qid = (uri) => uri.slice(uri.lastIndexOf("/") + 1);
 const films = new Map();
 
@@ -24,6 +28,7 @@ const values = (list) => list.map((q) => "wd:" + q).join(" ");
 const ids = [...films.keys()];
 const push = (q, field, v, max) => { const f = films.get(q); if (!f || !v || /^Q\d+$/.test(v)) return; const a = (f[field] ||= []); if (!a.includes(v) && a.length < max) a.push(v); };
 for (let i = 0; i < ids.length; i += CHUNK) {
+  overBudget();
   const chunk = values(ids.slice(i, i + CHUNK));
   for (const r of await sparql(`SELECT ?f ?fLabel (MIN(YEAR(?d)) AS ?y) (SAMPLE(?im) AS ?imdb) WHERE { VALUES ?f { ${chunk} }
       OPTIONAL { ?f wdt:P577 ?d } OPTIONAL { ?f wdt:P345 ?im }
