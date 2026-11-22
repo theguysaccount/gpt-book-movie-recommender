@@ -1,0 +1,523 @@
+{
+ "_about": "Maps Open Library subject strings (lowercased) to vocabulary tags. Each rule is [regular expression, tag]. A work gets every tag whose rule matches any of its subjects. Rules are deliberately conservative: a wrong tag is worse than a missing one.",
+ "rules": [
+  [
+   "\\bfantasy\\b|fantastic fiction",
+   "g:fantasy"
+  ],
+  [
+   "epic fantasy|high fantasy",
+   "g:epic-fantasy"
+  ],
+  [
+   "urban fantasy|paranormal",
+   "g:urban-fantasy"
+  ],
+  [
+   "fairy tales|folklore|fairies",
+   "g:fairy-tale"
+  ],
+  [
+   "mythology|\\bgods\\b|goddesses",
+   "th:gods-myth"
+  ],
+  [
+   "magic realism|magical realism",
+   "g:magical-realism"
+  ],
+  [
+   "science fiction|sci-fi",
+   "g:sci-fi"
+  ],
+  [
+   "space opera|interplanetary voyages|space warfare|life on other planets",
+   "g:space-opera"
+  ],
+  [
+   "cyberpunk|virtual reality",
+   "g:cyberpunk"
+  ],
+  [
+   "dystopia|dystopian|totalitarianism",
+   "g:dystopian"
+  ],
+  [
+   "post-apocalyptic|end of the world|apocalyptic",
+   "g:post-apocalyptic"
+  ],
+  [
+   "alternative histor",
+   "g:alt-history"
+  ],
+  [
+   "\\bhorror\\b",
+   "g:horror"
+  ],
+  [
+   "gothic",
+   "g:gothic"
+  ],
+  [
+   "detective and mystery|mystery fiction|mystery & detective|mystery and detective|\\bmystery\\b",
+   "g:mystery"
+  ],
+  [
+   "\\bcrime\\b|criminals|murder",
+   "g:crime"
+  ],
+  [
+   "police procedural|\\bpolice\\b",
+   "g:police-procedural"
+  ],
+  [
+   "legal stories|legal thrillers|trials|lawyers",
+   "g:legal"
+  ],
+  [
+   "thriller|suspense",
+   "g:thriller"
+  ],
+  [
+   "psychological fiction|psychological thriller",
+   "g:psychological-thriller"
+  ],
+  [
+   "spy stories|espionage|\\bspies\\b|intelligence service",
+   "g:spy"
+  ],
+  [
+   "adventure stories|adventure and adventurers|action & adventure|action and adventure",
+   "g:adventure"
+  ],
+  [
+   "war stories|war fiction|military fiction",
+   "g:war"
+  ],
+  [
+   "western stories|westerns|frontier and pioneer life",
+   "g:western"
+  ],
+  [
+   "love stories|romance|romantic",
+   "g:romance"
+  ],
+  [
+   "regency|historical romance",
+   "g:historical-romance"
+  ],
+  [
+   "humorous|humor|humour|comedy|wit and humor",
+   "g:comedy"
+  ],
+  [
+   "satire",
+   "g:satire"
+  ],
+  [
+   "historical fiction|fiction, historical|historical$",
+   "g:historical"
+  ],
+  [
+   "domestic fiction|family saga|families|family life",
+   "g:family-saga"
+  ],
+  [
+   "bildungsroman|coming of age|coming-of-age",
+   "g:coming-of-age"
+  ],
+  [
+   "young adult|juvenile fiction.*teen|teenage|teenagers|high schools",
+   "g:ya"
+  ],
+  [
+   "juvenile fiction|juvenile literature|children's fiction|children's stories|picture books",
+   "g:childrens"
+  ],
+  [
+   "comics & graphic novels|graphic novels|comic books|manga|comics",
+   "g:graphic"
+  ],
+  [
+   "short stories",
+   "g:short-stories"
+  ],
+  [
+   "\\bpoetry\\b|\\bpoems\\b",
+   "g:poetry"
+  ],
+  [
+   "^drama$|\\bplays\\b|tragedies|comedies \\(drama\\)",
+   "g:play"
+  ],
+  [
+   "classic literature|classics|open library staff picks.*classic",
+   "g:classic"
+  ],
+  [
+   "literary fiction|fiction, literary",
+   "g:literary"
+  ],
+  [
+   "autobiograph|memoir|personal narratives|diaries",
+   "g:memoir"
+  ],
+  [
+   "biograph",
+   "g:biography"
+  ],
+  [
+   "^history$|\\bhistory\\b.*(century|ancient|modern|civilization)|world history|social history",
+   "g:history"
+  ],
+  [
+   "popular science|^science$|physics|cosmology|astronomy|evolution|biology|genetics|neuroscience|mathematics",
+   "g:science"
+  ],
+  [
+   "natural history|nature writing|ecology|environment",
+   "g:nature"
+  ],
+  [
+   "philosophy|ethics|stoic",
+   "g:philosophy"
+  ],
+  [
+   "psychology|cognition|decision making|human behavior",
+   "g:psychology"
+  ],
+  [
+   "self-help|self help|self-actualization|personal growth|success|conduct of life|habit",
+   "g:self-help"
+  ],
+  [
+   "^business$|business enterprises|management|leadership|entrepreneurship|economics|finance, personal|investments",
+   "g:business"
+  ],
+  [
+   "political science|politics and government|social problems|sociology",
+   "g:politics"
+  ],
+  [
+   "true crime|criminal investigation.*case studies|serial murders",
+   "g:true-crime"
+  ],
+  [
+   "essays",
+   "g:essays"
+  ],
+  [
+   "journalism|reportage",
+   "g:journalism"
+  ],
+  [
+   "travel|voyages and travels|description and travel",
+   "g:travel"
+  ],
+  [
+   "\\bmagic\\b|wizards|witches|witchcraft|sorcer",
+   "th:magic"
+  ],
+  [
+   "dragons|monsters|vampires|werewolves|zombies|demon",
+   "th:monsters"
+  ],
+  [
+   "ghost|haunted",
+   "th:ghosts"
+  ],
+  [
+   "kings and rulers|queens|princes|princesses|courts and courtiers|royal",
+   "th:royalty"
+  ],
+  [
+   "good and evil",
+   "th:good-evil"
+  ],
+  [
+   "friendship",
+   "th:friendship"
+  ],
+  [
+   "brothers and sisters|siblings|\\bsisters\\b|\\bbrothers\\b|twins",
+   "th:siblings"
+  ],
+  [
+   "mothers|fathers|parent and child|parenting|parents",
+   "th:parenthood"
+  ],
+  [
+   "\\bfamily\\b|families|family relationships",
+   "th:family"
+  ],
+  [
+   "marriage|married|husband|wives|divorce|adultery",
+   "th:marriage"
+  ],
+  [
+   "orphans|runaways|misfits|outcasts",
+   "th:outsiders"
+  ],
+  [
+   "grief|bereavement|\\bdeath\\b|loss \\(psychology\\)",
+   "th:grief"
+  ],
+  [
+   "memory|amnesia",
+   "th:memory"
+  ],
+  [
+   "mental illness|mental health|depression|psychiatric|suicide",
+   "th:mental-health"
+  ],
+  [
+   "drug abuse|alcoholi|addict",
+   "th:addiction"
+  ],
+  [
+   "religio|christian|\\bfaith\\b|\\bgod\\b|spiritual",
+   "th:faith"
+  ],
+  [
+   "artificial intelligence|robots|androids",
+   "th:ai"
+  ],
+  [
+   "time travel",
+   "th:time"
+  ],
+  [
+   "extraterrestrial|aliens|human-alien encounters",
+   "th:first-contact"
+  ],
+  [
+   "space flight|outer space|astronauts|space colonies|\\bmars\\b",
+   "th:space"
+  ],
+  [
+   "survival|wilderness survival|castaways|shipwreck",
+   "th:survival"
+  ],
+  [
+   "\\banimals\\b|\\bdogs\\b|\\bcats\\b|horses",
+   "th:animals"
+  ],
+  [
+   "\\bsea\\b|seafaring|ocean|whaling|pirates|sailors",
+   "th:sea"
+  ],
+  [
+   "coloni|imperialism|\\bempire\\b",
+   "th:colonialism"
+  ],
+  [
+   "immigra|emigration|refugees|exiles",
+   "th:immigration"
+  ],
+  [
+   "world war|soldiers|veterans|vietnam war",
+   "th:war-experience"
+  ],
+  [
+   "holocaust|genocide|concentration camps",
+   "th:atrocity"
+  ],
+  [
+   "slavery|slaves|enslaved",
+   "th:slavery"
+  ],
+  [
+   "race relations|racism|african americans|civil rights|segregation",
+   "th:race"
+  ],
+  [
+   "women|feminis|sex role|gender",
+   "th:gender"
+  ],
+  [
+   "\\bgay\\b|lesbian|lgbt|homosexual|queer|bisexual|transgender",
+   "th:queer"
+  ],
+  [
+   "social classes|poverty|\\bpoor\\b|rich people|wealth|aristocracy",
+   "th:class"
+  ],
+  [
+   "revenge",
+   "th:revenge"
+  ],
+  [
+   "obsession|stalk",
+   "th:obsession"
+  ],
+  [
+   "conspirac|secret societies",
+   "th:conspiracy"
+  ],
+  [
+   "revolution|resistance|insurgency|rebellion",
+   "th:rebellion"
+  ],
+  [
+   "political fiction|politic|power \\(social",
+   "th:power"
+  ],
+  [
+   "justice|judges|judicial",
+   "th:justice"
+  ],
+  [
+   "schools|boarding schools|college students|universities|teachers",
+   "th:school"
+  ],
+  [
+   "city and town life|small town|villages",
+   "th:small-town"
+  ],
+  [
+   "voyages|journeys|road trip|quests",
+   "th:journey"
+  ],
+  [
+   "loneliness|solitude|isolation",
+   "th:isolation"
+  ],
+  [
+   "serial murder|serial killer",
+   "th:serial-killer"
+  ],
+  [
+   "mafia|organized crime|gangsters|gangs",
+   "th:organized-crime"
+  ],
+  [
+   "private investigators|detectives",
+   "th:detective"
+  ],
+  [
+   "\\bauthors\\b|\\bwriters\\b|authorship|books and reading|bookstores|booksellers",
+   "th:books-writing"
+  ],
+  [
+   "musicians|\\bmusic\\b|rock music|singers",
+   "th:music"
+  ],
+  [
+   "artists|painters|\\bart\\b",
+   "th:art-making"
+  ],
+  [
+   "actors|motion picture|hollywood|theater",
+   "th:showbiz"
+  ],
+  [
+   "cooking|\\bfood\\b|restaurants|chefs",
+   "th:food"
+  ],
+  [
+   "sports|baseball|football|basketball|running|boxing",
+   "th:competition"
+  ],
+  [
+   "identity \\(psychology\\)|\\bidentity\\b",
+   "th:identity"
+  ],
+  [
+   "man-woman relationships|\\blove\\b|dating|courtship",
+   "th:love"
+  ],
+  [
+   "nature|wilderness|forests|mountains",
+   "th:wilderness"
+  ],
+  [
+   "technology|internet|computers|social media",
+   "th:technology"
+  ],
+  [
+   "england|great britain|scotland|wales|british",
+   "w:britain"
+  ],
+  [
+   "london \\(england\\)|^london",
+   "w:london"
+  ],
+  [
+   "ireland|irish",
+   "w:ireland"
+  ],
+  [
+   "france|paris \\(france\\)|french",
+   "w:france"
+  ],
+  [
+   "italy|rome|venice|florence|italian",
+   "w:italy"
+  ],
+  [
+   "germany|berlin|vienna|austria",
+   "w:germany"
+  ],
+  [
+   "russia|soviet union|ukraine|poland",
+   "w:russia"
+  ],
+  [
+   "japan|tokyo|japanese",
+   "w:japan"
+  ],
+  [
+   "china|chinese",
+   "w:china"
+  ],
+  [
+   "korea",
+   "w:korea"
+  ],
+  [
+   "india|pakistan|afghanistan|bangladesh",
+   "w:south-asia"
+  ],
+  [
+   "africa|nigeria|south africa|kenya|congo",
+   "w:africa"
+  ],
+  [
+   "mexico|latin america|colombia|brazil|argentina|chile|cuba",
+   "w:latin-america"
+  ],
+  [
+   "new york \\(n\\.y\\.\\)|manhattan|brooklyn",
+   "w:new-york"
+  ],
+  [
+   "southern states|mississippi|georgia|alabama|louisiana",
+   "w:american-south"
+  ],
+  [
+   "california|los angeles",
+   "w:los-angeles"
+  ],
+  [
+   "world war, 1939-1945",
+   "w:ww2"
+  ],
+  [
+   "world war, 1914-1918",
+   "w:ww1"
+  ],
+  [
+   "middle ages|medieval|knights",
+   "w:medieval"
+  ],
+  [
+   "19th century|victorian",
+   "w:19th-century"
+  ],
+  [
+   "ancient|rome--history--empire|greece",
+   "w:ancient"
+  ]
+ ],
+ "fiction": "\\bfiction\\b|novel|stories|fantasy|romance|thriller|mystery",
+ "nonfiction": "nonfiction|non-fiction|biograph|memoir|history|science|self-help|business|essays|philosophy|psychology|true crime|travel|cooking|reference"
+}
