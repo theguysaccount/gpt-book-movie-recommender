@@ -41,7 +41,9 @@ submits only pages whose content hash changed since the live deploy (`manifest.j
 
 ### 1. A custom domain (the "domain rollout" session does this)
 
-The site reads its address from one setting, the repository variable `SITE_URL`. Moving it:
+The site reads its address from one setting, the repository variable `SITE_URL`. Use a domain or subdomain that
+serves nothing today: never point a name that already serves a site here, because that would replace it. If the apex
+is in use, take a subdomain, as Startups 101 did with `learn.startupcollege.io`. Moving it:
 
 1. DNS at the registrar. For an apex domain: four `A` records for `@` → `185.199.108.153`, `185.199.109.153`,
    `185.199.110.153`, `185.199.111.153`; four `AAAA` → `2606:50c0:8000::153`, `2606:50c0:8001::153`,
@@ -52,6 +54,9 @@ The site reads its address from one setting, the repository variable `SITE_URL`.
 4. `gh workflow run deploy.yml --repo theguysaccount/gpt-book-movie-recommender` (steps 2–4 back to back: until the
    deploy finishes, links on one of the two addresses point at the other path).
 5. When the certificate is issued: `gh api -X PUT repos/theguysaccount/gpt-book-movie-recommender/pages -F https_enforced=true`.
+6. About 20 minutes later, send every page to IndexNow once. A new host answers 403 at first, and later deploys send
+   only changed pages:
+   `curl -s https://<domain>/sitemap.xml | grep -o '<loc>[^<]*' | sed 's/<loc>//' > urls.txt && SITE_URL=https://<domain> node scripts/indexnow.mjs --file urls.txt`
 
 The build moves every canonical URL, the sitemap, robots.txt, IndexNow and all asset paths with it (covered by a
 test that builds for a root domain). GitHub redirects the old github.io URLs to the domain.
